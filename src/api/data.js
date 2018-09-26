@@ -13,3 +13,10 @@ export const getDragList = () => {
     method: 'get'
   })
 }
+
+export const getHome = () => {
+  return axios.request({
+    url: 'home',
+    method: 'get'
+  })
+}

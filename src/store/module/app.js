@@ -8,7 +8,11 @@ export default {
     local: ''
   },
   getters: {
-    menuList: (state, getters, rootState) => getMenuByRouter(routers, rootState.user.access)
+    menuList: (state, getters, rootState) => {
+      console.log(rootState.user.access)
+      console.log(routers)
+      return getMenuByRouter(routers, rootState.user.access)
+    }
   },
   mutations: {
     setBreadCrumb (state, routeMetched) {
