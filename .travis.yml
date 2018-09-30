@@ -1,9 +1,6 @@
 language: node_js
 node_js:
 - 8.11.4
-sudo: required
-addons:
-  ssh_known_hosts: 120.79.84.29
 cache:
   directories:
   - node_modules
@@ -22,8 +19,10 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_8396923de663_key -iv $encrypted_8396923de663_iv
   -in id_rsa.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
+addons:
+  ssh_known_hosts: 120.79.84.29
 after_success:
-- ssh root@120.79.84.29 StrictHostKeyChecking=no 'cd /root/www/iview/ && mkdir hahaha'
+- ssh -tt root@120.79.84.29 'cd /root/www/iview/ && mkdir aaaaa'
 notifications:
   email:
   - 503623265@qq.com
