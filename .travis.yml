@@ -23,8 +23,7 @@ before_install:
   -in id_rsa.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
 after_success:
-- ssh root@120.79.84.29 StrictHostKeyChecking=no 'cd /root/www/iview/ && git pull
-  && sh ./deploy.sh'
+- ssh root@120.79.84.29 StrictHostKeyChecking=no 'cd /root/www/iview/ && mkdir hahaha'
 notifications:
   email:
   - 503623265@qq.com
