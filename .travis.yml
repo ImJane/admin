@@ -22,7 +22,9 @@ before_install:
 addons:
   ssh_known_hosts: 120.79.84.29
 after_success:
-- ssh -tt root@120.79.84.29 'cd /root/www/iview/ && mkdir aaaaaaa'
+- sudo tar zcvf dist.tar.gz dist/
+- scp -r dist.tar.gz root@120.79.84.29:/root/www/
+- echo 'done!!!!'
 notifications:
   email:
   - 503623265@qq.com
