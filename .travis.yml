@@ -16,13 +16,13 @@ env:
   global:
     secure: tV60DsRo2bgUYzCh2pDHPo2b1YWPMay0/UFzWIHZu2UCqKG+pysil2lnqPeWakIeN7VasC67FKBcEjsW9yfzo1voMUJvETmW84SYvelm9mV4JXje3N6oQeESrhqah7WxNBQwHiOh35H1Kb1Wdyh8F2tyZsBalBf3p8l6uPVa8nhoI+vjPiQaqeR5yYw0EfPXRD2YKtiQe99b9aAYjfETuttuy0orwNyx3au6XppaDM4hZ2p/fSG58OJNcyYxgSzMlYIT/k5QYs6XPrhIwQ2YnKZTz3Kl78xU2qxWhJCVM5Aa/0pKveXvCGR+cw6blDa8+UVjtSH6kCEGJ0jVFTAQNZUKHaz76wlFEXcwm7Vsr8Zb2R2+msJZeOBwyXxql4DhfdbTiU/C4jYEQk4R7cTv40cQI5O7LowetR82HPuuTdsvfhf8DWo4RPAmce2KIOAa0sMjxLcLQ3ILxEWiW0iJ9RkAnXp3cp0cYLn/rrXsROFK9DdZsTAyTz8bG3oBwENjTDeBRhZjQLG2IgB5+zUdY2kSnNSBdtV8CcmCFAjxdffpe/1AkzMMS5n0xbq8OZp+/Uhf4WqAYAT2NUDeNUO8QitFS2gcxsSrrk7X2G01QjqP5QhnAxNfHVj8clO7KUJ1Oau7X4LRUCu75NM1UnBQQ7LckQwD5o9Axne1wEhbAKI=
 before_install:
-- openssl aes-256-cbc -K $encrypted_8396923de663_key -iv $encrypted_8396923de663_iv
+- openssl aes-256-cbc -K $encrypted_abccc9ecb37a_key -iv $encrypted_abccc9ecb37a_iv
   -in id_rsa.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
 addons:
   ssh_known_hosts: 120.79.84.29
 after_success:
-- ssh -tt root@120.79.84.29 'cd /root/www/iview/ && mkdir aaaaa'
+- ssh -tt root@120.79.84.29 'cd /root/www/iview/ && mkdir aaaaaaa'
 notifications:
   email:
   - 503623265@qq.com
