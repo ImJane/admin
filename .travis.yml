@@ -8,6 +8,8 @@ install:
 - npm install
 before_script: 
 script:
+- echo $NODE_ENV
+- export NODE_ENV=production
 - npm run build
 branches:
   only:
@@ -23,7 +25,7 @@ addons:
   ssh_known_hosts: 120.79.84.29
 after_success:
 - sudo tar zcvf dist.tar.gz dist/
-- scp -r dist.tar.gz root@120.79.84.29:/root/www/
+- scp -r dist.tar.gz root@120.79.84.29:/root/www/vue_dist
 - echo 'done!!!!'
 notifications:
   email:
