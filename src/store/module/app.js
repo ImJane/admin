@@ -9,8 +9,6 @@ export default {
   },
   getters: {
     menuList: (state, getters, rootState) => {
-      console.log(rootState.user.access)
-      console.log(routers)
       return getMenuByRouter(routers, rootState.user.access)
     }
   },

@@ -46,7 +46,6 @@ export default {
         route: route,
         type: 'push'
       })
-      console.log(route)
       this.$router.push(route)
     },
     createTagQuery () {
