@@ -14,9 +14,17 @@ export const getDragList = () => {
   })
 }
 
-export const getHome = () => {
+export const errorReq = () => {
   return axios.request({
-    url: 'home',
-    method: 'get'
+    url: 'error_url',
+    method: 'post'
+  })
+}
+
+export const saveErrorLogger = info => {
+  return axios.request({
+    url: 'save_error_logger',
+    data: info,
+    method: 'post'
   })
 }

@@ -25,8 +25,9 @@ addons:
   ssh_known_hosts: 120.79.84.29
 after_success:
 - sudo tar zcvf dist.tar.gz dist/
-- scp -r dist.tar.gz root@120.79.84.29:/root/www/vue_dist
-- echo 'done!!!!'
+- scp -r dist.tar.gz root@120.79.84.29:/root/www/vue_admin_dist
+- ssh -tt root@120.79.84.29 'cd /root/www/vue_admin_dist && ./script'
+- echo 'script.sh successfully executed.'
 notifications:
   email:
   - 503623265@qq.com
